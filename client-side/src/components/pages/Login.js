@@ -20,7 +20,7 @@ export default function Login() {
         <div className='mt-20 p-10'>
             <form>
                 <div>
-                    <label>Email</label><br />
+                    <label>Email</label><br /> 
                     <input type="text" className=' my-1 border-2 rounded-md focus:outline-pry w-72'
                      value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"  /><br/>
                 </div><br/>
