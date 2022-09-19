@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: digital-font;
+    src: url('./fonts/DS-DIGIB.TTF');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf');
+    
+}
+
+@font-face {
+    font-family: RobotoSlab;
+    src: url('./fonts/RobotoSlab-VariableFont_wght.ttf');
+    
+}

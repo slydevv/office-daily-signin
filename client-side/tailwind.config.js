@@ -10,6 +10,12 @@ module.exports = {
         'sec': '#EBC7E8',
         'aux': '#645CAA',
       },
+      fontFamily: {
+        'time': 'digital-font',
+        'general': 'Montserrat',
+        'sec':'RobotoSlab'
+     }
+      
     },
   },
   plugins: [],

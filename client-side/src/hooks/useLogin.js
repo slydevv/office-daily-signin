@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const useLogin = () => {
-    const [error, setError] = useState()
+    const [errors, setErrors] = useState()
     const [isLoading, setIsLoading] = useState(false)
     const {dispatch} = useAuthHook()
     const navigate = useNavigate() 
@@ -17,9 +17,9 @@ export const useLogin = () => {
             navigate('/dashboard')
         }).catch((err) => {
             setIsLoading(false)
-            setError(err.message)
+            setErrors(err.response.data.error)
            
         })
     }
-    return {login, error, isLoading}
+    return {login, errors, isLoading}
 }

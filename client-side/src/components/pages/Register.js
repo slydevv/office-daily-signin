@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 import { useRegister } from '../../hooks/useRegister';
 
 export default function Register() {
-    const {registerUsers} = useRegister()
+    const {registerUsers, errors, isLoading} = useRegister()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [officeName, setOfficeName] = useState('');
+    const [officeName, setOfficeName, ] = useState('');
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -16,8 +16,9 @@ export default function Register() {
        
     }
   return (
-    <div>
-        <div className='mt-8 mx-16'>
+    <div className='px-6 lg:flex justify-center'>
+        <div className='mt-20 lg:mt-7 lg:max-w-md p-10 container md:px-56 lg:px-20  rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+            <h3 className='text-center text-3xl font-sec underline underline-offset-4'>Register</h3><br/>
             <form>
                 <div>
                     <label>Email</label><br />
@@ -44,7 +45,10 @@ export default function Register() {
                     <input type="text" className='my-1 border-2 rounded-md focus:outline-pry w-64'
                     value={officeName} onChange={(e) => setOfficeName(e.target.value)} placeholder="Enter your password" />
                 </div><br />
-                <input className='bg-pry py-2 px-6 my-3 mx-20 text-white rounded-2xl' type="submit" onClick={handleRegister} />
+
+                {errors && <p className='text-sm text-red-600 text-center mt-5'>{errors}</p>}
+
+                <input className={isLoading ?  'bg-purple-200 my-6 lg:my-1 mx-24 py-2 px-5 text-white rounded-2xl' : 'bg-pry my-6 mx-24 lg:my-1 py-2 px-5 text-white rounded-2xl'} type="submit" onClick={handleRegister} disabled={isLoading} />
                 <p className='text-center'>Already Registered? <Link to="/" className="text-pry">Login here</Link></p>
             </form>
         </div>
