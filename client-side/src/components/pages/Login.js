@@ -17,17 +17,17 @@ export default function Login() {
     
   return (
     <div className='px-6 lg:flex justify-center'>
-        <div className='mt-20 p-10 md:px-52 lg:max-w-md lg:px-20 container rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+        <div className='mt-20 p-10 md:px-52 lg:max-w-md lg:px-20 container rounded-lg border border-gray-200 shadow-md '>
             <h3 className='text-center text-3xl font-sec underline underline-offset-4'>Login</h3><br/>
             <form className=''>
                 <div>
                     <label>Email</label><br /> 
-                    <input type="text " className=' my-1 border-2 rounded-md focus:outline-pry w-72 '
+                    <input type="text " className=' my-1 border-2 rounded-md focus:outline-pry w-60 md:w-72 '
                      value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"  /><br/>
                 </div><br/>
                 <div>
                     <label>Password</label><br />
-                    <input type="password" className='my-1 border-2 rounded-md focus:outline-pry w-72'
+                    <input type="password" className='my-1 border-2 rounded-md focus:outline-pry w-60 md:w-72'
                      value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" />
                 </div>
                 {errors && <p className='text-sm text-red-600 text-center mt-5'>{errors}</p>}<br/>

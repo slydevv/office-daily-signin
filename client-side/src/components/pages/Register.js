@@ -17,7 +17,7 @@ export default function Register() {
     }
   return (
     <div className='px-6 lg:flex justify-center'>
-        <div className='mt-20 lg:mt-7 lg:max-w-md p-10 container md:px-56 lg:px-20  rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+        <div className='mt-20 lg:mt-7 lg:max-w-md p-10 container md:px-56 lg:px-20  rounded-lg border border-gray-200 shadow-md '>
             <h3 className='text-center text-3xl font-sec underline underline-offset-4'>Register</h3><br/>
             <form>
                 <div>

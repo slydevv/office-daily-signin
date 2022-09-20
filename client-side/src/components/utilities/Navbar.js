@@ -12,7 +12,7 @@ export default function Navbar() {
         navigate('/')
     }
   return (
-    <div className='bg-gray-100  rounded-br-lg rounded-bl-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+    <div className='bg-gray-100  rounded-br-lg rounded-bl-lg border border-gray-200 shadow-md '>
         <div className={user ?'flex px-4 md:px-14 py-3' : ' px-4 py-3 '}>          
             <h3 className={user ? 'text-xl font-bold w-44' : 'text-center text-xl font-bold '}>Silver <span className='text-pry'>Tech</span> Hub</h3> 
           

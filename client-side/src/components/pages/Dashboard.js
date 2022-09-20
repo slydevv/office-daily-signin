@@ -49,14 +49,14 @@ export default function Dashboard() {
                 }
             </div>
             <div className='md:flex justify-center'> 
-            {signInTime && <div className='w-full max-w-sm my-8 px-4 py-7  bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+            {signInTime && <div className='w-full max-w-sm my-8 px-4 py-7  bg-white rounded-lg border border-gray-200 shadow-md '>
                 <h4 className='text-2xl text-center'>Welcome back to office, {user && user.officeName}</h4><br/>
                 <h6 className='text-3xl text-center'>You signed In at: <br/>
                 <p className='text-center text-3xl font-time'>{signInTime}</p></h6><br/><br/>
                 <p className='text-center text-sm text-green-500'>* Please check your task for the week below</p>
                 </div>}
 
-                {signOutTime && <div className='w-full max-w-sm my-8 px-4 py-7  bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+                {signOutTime && <div className='w-full max-w-sm my-8 px-4 py-7  bg-white rounded-lg border border-gray-200 shadow-md '>
                     <h4 className='text-2xl text-center' >Hope you had a nice day</h4><br/>
                     <h5 className='text-center text-3xl '>You signed out at: <br/><br/>
                     <span className='text-center text-3xl font-time'>{signOutTime}</span></h5>
@@ -64,7 +64,7 @@ export default function Dashboard() {
                     </div>
         </div>
     </div>
-    <section className={activites ? 'my-10 mb-8 bg-gray-50 md:flex border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700' : 'hidden'}>
+    <section className={activites ? 'my-10 mb-8 bg-gray-50 md:flex border-gray-200 shadow-md ' : 'hidden'}>
           <div className='mx-auto px-10 py-6'>
           <h4 className='text-2xl text-center font-bold'>Work activites for the week</h4><br/>
           <div className='text-lg'>
