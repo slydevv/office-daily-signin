@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken')
 const registerUsers = async (req, res) => {
 
     try{
-        if(!req.body.email || !req.body.password){
+        if(!req.body.email || !req.body.password){ 
             throw Error("all fields must be filled") 
         }
         if(!validator.isEmail(req.body.email)){
@@ -69,7 +69,7 @@ const loginUsers = async ( req,res ) => {
             secure: process.env.NODE_ENV === "production"
        })
 
-       const userToReturn = {...user._doc}
+       const userToReturn = {...user._doc} 
        delete userToReturn.password;
 
        return res.status(200).json({

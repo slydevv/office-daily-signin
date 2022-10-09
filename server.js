@@ -12,12 +12,19 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cookieParser());
-app.use(express.static(path.resolve(__dirname, "./client-side/build")))
 
 
-app.get('*', (req,res) => {
-    res.sendFile(path.resolve(__dirname, './client-side/build', 'index.html'))
-})
+
+
+
+if(process.env.NODE_ENV === 'production'){
+
+    app.use(express.static(path.resolve(__dirname, "./client-side/build")))
+
+    app.get('*', (req,res) => {
+        res.sendFile(path.resolve(__dirname, './client-side/build', 'index.html'))
+    })
+}
 
 app.use('/api/auth', userRoutes)
 

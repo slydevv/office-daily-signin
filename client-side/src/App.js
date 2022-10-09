@@ -1,22 +1,28 @@
+
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import Dashboard from './components/pages/Dashboard';
 import Login from './components/pages/Login'
 import Register from './components/pages/Register';
+import Staff from './components/pages/Staff';
 import Navbar from './components/utilities/Navbar';
 import { useAuthHook } from './hooks/useAuthHook'
 
 
 function App() {
   const { user } = useAuthHook()
+
+ 
   return (
     <div className="">
    
       <BrowserRouter>
       <Navbar />
+      
         <Routes>
           <Route path="/" element={user ? <Dashboard/> : <Login />} /> 
           <Route path="/register" element={user ? <Dashboard/> : <Register />} /> 
           <Route path="/dashboard" element={!user ?<Login/> : <Dashboard />} /> 
+          <Route path="/staff" element={<Staff />} /> 
           <Route
            path="*"
            element={
