@@ -23,7 +23,7 @@ export default function Login() {
                 <div>
                     <label>Email</label><br /> 
                     <input type="text " className=' my-1 border-2 rounded-md focus:outline-pry w-60 md:w-72 '
-                     value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"  /><br/>
+                     value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" /><br/>
                 </div><br/>
                 <div>
                     <label>Password</label><br />

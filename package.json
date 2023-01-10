@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm run client\" \"npm run server\"",
     "install": "cd client-side && npm install",
     "build": "cd client-side && npm run build",
-    "heroku-postbuild": "npm run install && npm run build",
+    "render-postbuild": "npm i && npm run install && npm run build",
     "start": "node server.js"
 
   },
